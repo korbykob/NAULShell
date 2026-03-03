@@ -116,7 +116,7 @@ void entry()
                 }
                 else if (checkFile(buffer))
                 {
-                    if (compareStrings(buffer + bufferLength - 4, ".bin") == 0)
+                    if (compareStrings(buffer + bufferLength - 4, ".nxe") == 0)
                     {
                         waitForThread(execute(buffer));
                     }

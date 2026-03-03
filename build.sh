@@ -14,4 +14,4 @@ ld -r bin/commands/help.o bin/commands/exit.o bin/commands/ping.o bin/commands/c
 
 nm bin/final.o > bin/shell.sym
 
-ld $PROGRAM_LINKER_FLAGS bin/final.o -o bin/shell.bin
+ld $PROGRAM_LINKER_FLAGS bin/final.o -o bin/shell.nxe
