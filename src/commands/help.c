@@ -12,5 +12,6 @@ TTY_GREEN "kys        " TTY_DEFAULT ": Panic the system\n"
 TTY_GREEN "(folder)/* " TTY_DEFAULT ": List files in the folder\n"
 TTY_GREEN "(folder)/  " TTY_DEFAULT ": Enter the folder\n"
 TTY_GREEN "..         " TTY_DEFAULT ": Go back a folder\n"
-TTY_GREEN "(file)     " TTY_DEFAULT ": Execute or read the file\n");
+TTY_GREEN "(file)     " TTY_DEFAULT ": Execute or read the file\n"
+TTY_GREEN "(program)  " TTY_DEFAULT ": Execute the installed program\n");
 }
