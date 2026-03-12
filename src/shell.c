@@ -136,7 +136,21 @@ void entry()
                 }
                 else
                 {
-                    write("Unknown command\n");
+                    char* program = allocate(10 + commandLength + 1 + commandLength + 5);
+                    copyString("/programs/", program);
+                    addString(command, program);
+                    if (checkFolder(program))
+                    {
+                        addString("/", program);
+                        addString(command, program);
+                        addString(".nxe", program);
+                        waitForThread(execute(program));
+                    }
+                    else
+                    {
+                        write("Unknown command\n");
+                    }
+                    unallocate(program);
                 }
             }
             unallocate(buffer);
