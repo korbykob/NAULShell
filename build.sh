@@ -3,7 +3,7 @@ set -e
 
 mkdir -p bin/commands
 
-COMPILER_FLAGS="$PROGRAM_COMPILER_FLAGS -Iinclude -g -fno-omit-frame-pointer -mavx2 -O2 -fvect-cost-model=dynamic -Wall -Wextra -Werror"
+COMPILER_FLAGS="$PROGRAM_COMPILER_FLAGS -Iinclude -g -fno-omit-frame-pointer -O2 -fvect-cost-model=dynamic -Wall -Wextra -Werror"
 
 gcc $COMPILER_FLAGS src/commands/help.c -o bin/commands/help.o
 gcc $COMPILER_FLAGS src/commands/exit.c -o bin/commands/exit.o
