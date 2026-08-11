@@ -103,16 +103,19 @@ void entry()
                 }
                 else if (compareStrings(command, "..") == 0)
                 {
-                    if (directory[1] != '\0')
+                    if (buffer[1] != '\0')
                     {
-                        char* current = directory + directoryLength - 2;
+                        char* current = buffer + bufferLength - 4;
                         uint64_t count = 0;
                         while (*current-- != '/')
                         {
                             count++;
                         }
-                        directory[directoryLength - count - 1] = '\0';
+                        buffer[bufferLength - count - 3] = '\0';
                         directoryLength -= count + 1;
+                        unallocate(directory);
+                        directory = allocate(directoryLength + 1);
+                        copyString(buffer, directory);
                     }
                 }
                 else if (checkFile(buffer))
