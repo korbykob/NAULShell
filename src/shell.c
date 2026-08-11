@@ -18,6 +18,7 @@ const struct
     { "ping", shellPing },
     { "clear", shellClear },
     { "kys", shellKys },
+    { "usage", shellUsage },
     { 0, 0 }
 };
 char* directory = 0;
