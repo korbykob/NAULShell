@@ -6,5 +6,7 @@
 #include <commands/clear.h>
 #include <commands/kys.h>
 #include <commands/usage.h>
+#include <commands/reboot.h>
+#include <commands/shutdown.h>
 
 extern char* directory;

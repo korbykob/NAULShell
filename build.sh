@@ -11,9 +11,11 @@ gcc $COMPILER_FLAGS src/commands/ping.c -o bin/commands/ping.o
 gcc $COMPILER_FLAGS src/commands/clear.c -o bin/commands/clear.o
 gcc $COMPILER_FLAGS src/commands/kys.c -o bin/commands/kys.o
 gcc $COMPILER_FLAGS src/commands/usage.c -o bin/commands/usage.o
+gcc $COMPILER_FLAGS src/commands/reboot.c -o bin/commands/reboot.o
+gcc $COMPILER_FLAGS src/commands/shutdown.c -o bin/commands/shutdown.o
 gcc $COMPILER_FLAGS src/shell.c -o bin/shell.o
 
-ld -r bin/commands/help.o bin/commands/exit.o bin/commands/ping.o bin/commands/clear.o bin/commands/kys.o bin/commands/usage.o bin/shell.o -o bin/final.o
+ld -r bin/commands/help.o bin/commands/exit.o bin/commands/ping.o bin/commands/clear.o bin/commands/kys.o bin/commands/usage.o bin/commands/reboot.o bin/commands/shutdown.o bin/shell.o -o bin/final.o
 
 nm bin/final.o > bin/shell.sym
 

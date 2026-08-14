@@ -19,6 +19,8 @@ const struct
     { "clear", shellClear },
     { "kys", shellKys },
     { "usage", shellUsage },
+    { "reboot", shellReboot },
+    { "shutdown", shellShutdown },
     { 0, 0 }
 };
 char* directory = 0;
